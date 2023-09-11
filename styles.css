@@ -1,4 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .grid {
+    margin-top:32px;
     display: flex;
     flex-direction: column;
     border-top: 1px solid black;
@@ -16,3 +22,7 @@
     width: 16px;
     height: 16px;
 }
+
+/* .column:hover {
+    background-color: aqua;
+} */
