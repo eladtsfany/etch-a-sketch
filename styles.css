@@ -1,10 +1,18 @@
+.grid {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    max-width: max-content;
+}
 
-.row {}
+.row {
+    display: flex;
+}
 
 .column {
-    display: inline-block;
-    border: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     width: 16px;
     height: 16px;
-
 }
