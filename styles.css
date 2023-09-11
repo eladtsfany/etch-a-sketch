@@ -1,28 +1,33 @@
 body {
+    margin: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .grid {
-    margin-top:32px;
+    width: 800px;
+    height: 800px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    max-width: max-content;
+    border: 1px solid black
+        /* border-top: 1px solid black; */
+        /* border-left: 1px solid black; */
 }
 
 .row {
     display: flex;
+    flex: 1;
 }
 
-.column {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 16px;
-    height: 16px;
+.cell {
+    /* border-right: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+    flex: 1;
 }
 
-/* .column:hover {
-    background-color: aqua;
-} */
+.btn {
+    margin: 0;
+    padding: 12px 24px;
+}
