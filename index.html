@@ -8,7 +8,24 @@
 </head>
 
 <body>
-    <button type="button" class="btn">Grid Size</button>
+    <h1>Etch-a-Sketch</h1>
+    <p><em>Click on the board to toggle the pen!</em></p>
+    <div class="container">
+        <div class="side-bar">
+            <!-- <button type="button" id="grid-size" class="btn">Grid Size</button> -->
+            <button type="button" id="rainbow" class="btn">Rainbow</button>
+            <button type="button" id="gray-scale" class="btn">Grayscale</button>
+            <button type="button" id="gray" class="btn">Gray</button>
+            <button type="button" id="eraser" class="btn">Eraser</button>
+            <button type="button" id="reset" class="btn">Reset</button>
+            <div class="slider-container">
+                <p class="slider-header">16 x 16</p>
+                <input type="range" min="1" max="64" value="16" class="slider" id="grid-size">
+            </div>
+        </div>
+        <div id="grid-container"></div>
+    </div>
+
 
     <script src="index.js"></script>
 </body>
