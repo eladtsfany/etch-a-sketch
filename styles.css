@@ -84,3 +84,37 @@ p {
 .slider-header {
     margin: 0;
 }
+
+.footer {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 32px;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgb(50, 50, 50);
+}
+
+div.text,
+p {
+    color: rgb(50, 50, 50);
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#github-logo {
+    width: 32px;
+    /* height: 6px; */
+}
