@@ -5,12 +5,24 @@ body {
     flex-direction: column;
     font-family: Roboto, sans-serif;
     background-color: rgb(231, 231, 231);
+    color: rgb(50, 50, 50);
+}
+
+.footer,
+.header {
+    padding: 36px;
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+
+
 }
 
 h1 {
-    /* margin:0; */
+    margin: 0;
     font-size: 56px;
-    padding-bottom: 16px;
 }
 
 .flex-wrapper {
@@ -75,6 +87,7 @@ h1 {
 
 
 .btn {
+    border: 2px solid lightslategray;
     margin: 0;
     padding: 16px 24px;
     align-self: stretch;
@@ -97,13 +110,8 @@ h1 {
 }
 
 .footer {
-    display: flex;
     font-size: 18px;
-    padding: 36px;
     margin-top: 24px;
-    justify-content: center;
-    align-self: stretch;
-    align-items: center;
     gap: 12px;
 }
 
@@ -113,11 +121,6 @@ h1 {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: rgb(50, 50, 50);
-}
-
-div.text,
-p {
     color: rgb(50, 50, 50);
 }
 
@@ -132,11 +135,11 @@ p {
 
 #toggle-header {
     display: flex;
-    /* gap: 32px; */
     margin-left: 156px;
     width: 500px;
     justify-content: space-around;
     align-items: center;
+    margin-top: 24px;
 }
 
 #toggle-text {
