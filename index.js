@@ -1,4 +1,4 @@
-let penColor = 'green';
+let penColor = 'black';
 let click = false;
 
 // a function that creates an NxN grid and returns it.
@@ -47,17 +47,27 @@ function newGrid() {
 */
 function toggleClick() {
     click = !click;
+    const toggle = document.getElementById('toggle-draw');
+    if (click) {
+        toggle.textContent = 'Toggled!';
+        toggle.style.color = 'green';
+    }
+    else {
+        toggle.textContent = 'Not toggled..';
+        toggle.style.color = 'red';
+    }
 }
 
 function handleColor(e) {
-    if (!click)
+    if (!click) {
         return;
+    }
     if (e.target.classList.contains('cell')) {
         if (penColor === 'gray') {
             e.target.style.filter = 'none';
             e.target.style.backgroundColor = 'gray';
         }
-        if (penColor === 'rainbow') {
+        else if (penColor === 'rainbow') {
             e.target.style.filter = 'none';
             e.target.style.backgroundColor = randomColor();
         }
@@ -65,18 +75,19 @@ function handleColor(e) {
             e.target.style.filter = 'none';
             e.target.style.backgroundColor = '';
         }
-        else if (penColor === 'gray-scale') {
-            // currentScale = grayscale(10%) -> returns the float 10 to currentScale.
-            let currentScale = parseFloat(e.target.style.filter.replace("grayscale(", "").replace("%)", ""));
-            if (isNaN(currentScale)) {
-                currentScale = 0;
-            }
-            currentScale += 20;
-            if (currentScale <= 100) {
-                e.target.style.filter = `grayscale(${currentScale}%)`;
-                console.log(e.target);
-            }
-        }
+        // grascale functionality currently doesn't work
+        // else if (penColor === 'gray-scale') {
+        //     // currentScale = grayscale(10%) -> returns the float 10 to currentScale.
+        //     let currentScale = parseFloat(e.target.style.filter.replace("grayscale(", "").replace("%)", ""));
+        //     if (isNaN(currentScale)) {
+        //         currentScale = 0;
+        //     }
+        //     currentScale += 20;
+        //     if (currentScale <= 100) {
+        //         e.target.style.filter = `grayscale(${currentScale}%)`;
+        //         console.log(e.target);
+        //     }
+        // }
         else {
             e.target.style.backgroundColor = penColor;
             e.target.style.filter = 'grayscale(0))';
@@ -107,13 +118,15 @@ function randomColor() {
     return `rgb(${R}, ${G}, ${B})`;
 }
 
-function resetBoard() {
-    //current slider value
-    newGrid(slider.value);
-}
 
+// function colorInput(e) {
+//     penColor = e.target.value;
+// }
+
+document.getElementById('color-input').addEventListener('input', (e) => penColor = e.target.value);
+// document.getElementById('color-picker').addEventListener('click', colorPicker);
 document.getElementById('rainbow').addEventListener('click', () => penColor = 'rainbow');
 document.getElementById('gray').addEventListener('click', () => penColor = 'gray');
+// document.getElementById('gray-scale').addEventListener('click', () => penColor = 'gray-scale');
 document.getElementById('eraser').addEventListener('click', () => penColor = 'eraser');
-document.getElementById('gray-scale').addEventListener('click', () => penColor = 'gray-scale');
-document.getElementById('reset').addEventListener('click', resetBoard);
+document.getElementById('reset').addEventListener('click', () => newGrid(slider.value));
