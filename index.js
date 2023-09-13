@@ -54,7 +54,7 @@ function toggleClick() {
     }
     else {
         toggle.textContent = 'Not toggled..';
-        toggle.style.color = 'red';
+        toggle.style.color = 'darkred';
     }
 }
 
