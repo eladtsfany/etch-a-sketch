@@ -49,11 +49,11 @@ function toggleClick() {
     click = !click;
     const toggle = document.getElementById('toggle-draw');
     if (click) {
-        toggle.textContent = 'Toggled!';
+        toggle.textContent = 'Active';
         toggle.style.color = 'green';
     }
     else {
-        toggle.textContent = 'Not toggled..';
+        toggle.textContent = 'Inactive';
         toggle.style.color = 'darkred';
     }
 }
